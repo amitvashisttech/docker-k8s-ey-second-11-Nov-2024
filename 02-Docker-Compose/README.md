@@ -65,32 +65,20 @@
   736  cd ..
   737  ls
   738  cat 02-MyApp/docker-compose.yaml
-  739  s
-  740  cd ..
-  741  ls
   742  cd 02-Docker-Compose/
-  743  ls
   744  mkdir 03-Build
-  745  ls
   746  cd 03-Build/
-  747  ls
   748  cp -rf ../../01-Docker/04-Docker-Custom-Images/apache/v4/* .
-  749  ls
   750  cat info.html
-  751  ls
   752  cat docker-compose.yaml
-  753  ls
   754  mv MyDocker MyDockerfile
   755  cat docker-compose.yaml
-  756  ls
   757  docker-compose up -d
   758  docker images
   759  docker ps
   760  curl localhost:8092
   761  curl localhost:8092/info.html
-  762  ls
   763  cat info.html
-  764  ls
   765  docker-compose up -d
   766  cat MyDockerfile
   767  docker-compose up -d

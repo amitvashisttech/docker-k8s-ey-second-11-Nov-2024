@@ -1,0 +1,40 @@
+services:
+  web: 
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    networks:
+      - mynet
+    volumes:
+      - mynginx-app-vol1:/myapp1
+      - mynginx-app-vol2:/myapp2
+
+  python: 
+    image: amitvashist7/docker-k8s-ey-second-11-nov-2024-python-web-app:r2
+    ports:
+      - "8081:5000"
+    networks:
+      - mynet
+    volumes:
+      - mypython-app-vol1:/myapp1
+
+  db: 
+    image: nginx:alpine
+    ports:
+      - "8082:80"
+    networks:
+      - mysecure-net
+    volumes:
+      - mydbvol1:/oradb
+
+networks:
+  mynet:
+    driver: bridge        
+  mysecure-net:
+    driver: bridge        
+
+volumes:
+  mydbvol1:
+  mypython-app-vol1:
+  mynginx-app-vol2:
+  mynginx-app-vol1:

@@ -1,0 +1,16 @@
+services:
+  web: 
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+
+  python: 
+    image: amitvashist7/docker-k8s-ey-second-11-nov-2024-python-web-app:r2
+    ports:
+      - "8081:5000"
+
+  db: 
+    image: nginx:alpine
+    ports:
+      - "8082:80"
+

@@ -1,0 +1,8 @@
+services:
+  myweb:
+    build: 
+      context: . 
+      dockerfile: MyDockerfile
+    ports:
+      - "8092:80"
+      - "8093:81"
